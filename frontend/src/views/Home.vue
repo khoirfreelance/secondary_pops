@@ -7,17 +7,17 @@
     <!-- Section Cover -->
     <section id="section0" class="hero-section position-relative text-white">
       <!-- Hero Content -->
-      <div class="hero-content d-flex flex-column align-items-center justify-content-center text-center py-5">
+      <div
+        class="hero-content d-flex flex-column align-items-center justify-content-center text-center py-5"
+      >
         <h5 class="fw-semibold text-dark">Selamat Datang di</h5>
-        <h1 class="fw-bold display-4 text-primary">
-          Pusat Operasi Penurunan Stunting (POPS)
-        </h1>
+        <h1 class="fw-bold display-4 text-primary">Pusat Operasi Penurunan Stunting (POPS)</h1>
         <!-- <h3 class="fw-bold text-primary">Kabupaten Brebes ▼</h3> -->
       </div>
 
       <!-- Hero Image -->
       <div class="hero-image text-start top-0">
-        <img src="/src/assets/anak.png" alt="Anak" class="img-fluid hero-anak">
+        <img src="/src/assets/anak.png" alt="Anak" class="img-fluid hero-anak" />
       </div>
 
       <!-- Stats -->
@@ -42,11 +42,18 @@
           </div>
         </div>
       </div>
-
     </section>
 
     <!-- Section Gizi -->
-    <section class="py-5" id="section2" style="background-image: url('/src/assets/pattern_bg.png');background-position: center;background-size: contain;">
+    <section
+      class="py-5"
+      id="section2"
+      style="
+        background-image: url('/src/assets/pattern_bg.png');
+        background-position: center;
+        background-size: contain;
+      "
+    >
       <div class="container">
         <ul class="nav nav-pills justify-content-center mb-4" id="chartTabs" role="tablist">
           <li class="nav-item me-2">
@@ -58,7 +65,7 @@
               type="button"
               role="tab"
             >
-               Gizi Anak
+              Gizi Anak
             </button>
           </li>
           <li class="nav-item">
@@ -76,21 +83,20 @@
         </ul>
         <div class="tab-content">
           <div class="tab-pane fade show active" id="gizi" role="tabpanel">
-            <!-- Alert -->
-            <!-- <div class="alert alert-info">
-              <i></i>
-              Total Data <strong>Gizi Anak</strong> Per Bulan {{ currentMonthYear }}:
-              <strong>{{ totalData }}</strong>
-            </div> -->
-
             <div class="mt-5">
               <h5 class="mb-0 fw-bold">Status Gizi Anak</h5>
               <h1 class="text-primary fw-bold">Berdasarkan Kategori Usia</h1>
             </div>
 
-            <div class="d-flex flex-wrap align-items-center justify-content-between mb-3">
+            <div
+              class="d-flex flex-column flex-md-row align-items-center justify-content-between mb-3 gap-2"
+            >
               <!-- Nav Pills -->
-              <ul class="nav nav-pills mb-2 mb-md-0" id="pills-tab" role="tablist">
+              <ul
+                class="nav nav-pills mb-2 mb-md-0 justify-content-center"
+                id="pills-tab"
+                role="tablist"
+              >
                 <li class="nav-item" role="presentation">
                   <button
                     class="nav-link active"
@@ -130,7 +136,10 @@
               </ul>
 
               <!-- Filter Form -->
-              <form class="d-flex align-items-center gap-2" @submit.prevent="applyFilter">
+              <form
+                class="d-flex flex-wrap justify-content-center align-items-center gap-2"
+                @submit.prevent="applyFilter"
+              >
                 <select v-model="selectedMonth" class="form-select">
                   <option v-for="(m, idx) in months" :key="idx" :value="idx + 1">
                     {{ m }}
@@ -143,15 +152,12 @@
                   </option>
                 </select>
 
-                <button type="submit" class="btn btn-gradient px-5">
-                  Cari
-                </button>
+                <button type="submit" class="btn btn-gradient px-5">Cari</button>
               </form>
             </div>
 
             <!-- content -->
             <div class="p-4 rounded shadow-sm text-center">
-
               <!-- Tabs Content -->
               <div class="tab-content" id="pills-tabContent">
                 <!-- BB/U -->
@@ -375,15 +381,36 @@
 
         <!-- Split Layout -->
         <div class="row align-items-center mb-5 text-white">
-            <p class="lh-lg" style="text-align: justify">
-              <strong>Tanoto Foundation</strong> bersama <strong>BKKBN</strong> dan pemerintah daerah bekerja sama dalam mengembangkan program percepatan penurunan stunting di empat kabupaten/kota di Provinsi Jawa Barat, Kabupaten Bogor. Strategi pengembangan program tidak saja fokus kepada dukungan teknis konvergensi dan koordinasi dalam penyusunan kebijakan strategi percepatan penurunan stunting, namun juga mewujudkan layanan pencegahan stunting yang lebih berkualitas di tingkat masyarakat.
-            </p>
-            <p class="lh-lg" style="text-align: justify">
-              Agar program pendampingan percepatan penurunan stunting tersebut dilakukan secara tepat sasaran sesuai dengan ketersediaan sumber daya hingga di tingkat desa, Tanoto Foundation berupaya menginisiasi pengelolaan program stunting berbasis data penerima sasaran di tingkat desa melalui program POPS (Pusat Operasi Penurunan Stunting). Inisiatif ini akan diujicobakan (pilot) di Desa Kluwut, Kabupaten Brebes. Dalam mempersiapkan program tersebut, beberapa tahapan akan dilakukan diantaranya ; Pertemuan assesmen kebutuhan (needs assessment) untuk menggali kebutuhan dan situasi di desa secara komprehensif sehingga kerangka program POPS yang dikembangkan tepat untuk membantu TPPS desa melakukan pengambilan keputusan intervensi stunting yang efektif, Menyepakati alur proses pengumpulan data dan informasi yang dibutuhkan, dan pengembangan website – applikasi POPS sebagai media yang akan ditampilkan dalam penyajian data.
-            </p>
-            <p class="lh-lg" style="text-align: justify">
-              Dalam pelaksanaan Program POPS ini, Tanoto Foundation bekerjasama dengan Yayasan Satu Karsa Karya (YSKK) sebagai mitra implementasi di Lapangan, dan juga mengajak Pemerintah dan Kader Desa Kluwut untuk membantu dalam penggalian/pengumpulan data dan informasi. Pelibatan Desa Kluwut sejak awal program POPS perlu dilakukan untuk memastikan adanya jaminan keberlanjutan Program POPS ini. Terkait dengan hal tersebut untuk mempermudah memahami alur porses program POPS berikut kami susun acuan program untuk bisa dibaca dan dipahami oleh para pihak yang akan terlibat dalam implementasi program ini.
-            </p>
+          <p class="lh-lg" style="text-align: justify">
+            <strong>Tanoto Foundation</strong> bersama <strong>BKKBN</strong> dan pemerintah daerah
+            bekerja sama dalam mengembangkan program percepatan penurunan stunting di empat
+            kabupaten/kota di Provinsi Jawa Barat, Kabupaten Bogor. Strategi pengembangan program
+            tidak saja fokus kepada dukungan teknis konvergensi dan koordinasi dalam penyusunan
+            kebijakan strategi percepatan penurunan stunting, namun juga mewujudkan layanan
+            pencegahan stunting yang lebih berkualitas di tingkat masyarakat.
+          </p>
+          <p class="lh-lg" style="text-align: justify">
+            Agar program pendampingan percepatan penurunan stunting tersebut dilakukan secara tepat
+            sasaran sesuai dengan ketersediaan sumber daya hingga di tingkat desa, Tanoto Foundation
+            berupaya menginisiasi pengelolaan program stunting berbasis data penerima sasaran di
+            tingkat desa melalui program POPS (Pusat Operasi Penurunan Stunting). Inisiatif ini akan
+            diujicobakan (pilot) di Desa Kluwut, Kabupaten Brebes. Dalam mempersiapkan program
+            tersebut, beberapa tahapan akan dilakukan diantaranya ; Pertemuan assesmen kebutuhan
+            (needs assessment) untuk menggali kebutuhan dan situasi di desa secara komprehensif
+            sehingga kerangka program POPS yang dikembangkan tepat untuk membantu TPPS desa
+            melakukan pengambilan keputusan intervensi stunting yang efektif, Menyepakati alur
+            proses pengumpulan data dan informasi yang dibutuhkan, dan pengembangan website –
+            applikasi POPS sebagai media yang akan ditampilkan dalam penyajian data.
+          </p>
+          <p class="lh-lg" style="text-align: justify">
+            Dalam pelaksanaan Program POPS ini, Tanoto Foundation bekerjasama dengan Yayasan Satu
+            Karsa Karya (YSKK) sebagai mitra implementasi di Lapangan, dan juga mengajak Pemerintah
+            dan Kader Desa Kluwut untuk membantu dalam penggalian/pengumpulan data dan informasi.
+            Pelibatan Desa Kluwut sejak awal program POPS perlu dilakukan untuk memastikan adanya
+            jaminan keberlanjutan Program POPS ini. Terkait dengan hal tersebut untuk mempermudah
+            memahami alur porses program POPS berikut kami susun acuan program untuk bisa dibaca dan
+            dipahami oleh para pihak yang akan terlibat dalam implementasi program ini.
+          </p>
         </div>
 
         <!-- Goals Section -->
@@ -465,7 +492,7 @@
             <div class="modal-content border-0 rounded-4 shadow-lg">
               <div class="modal-header bg-primary text-white rounded-top-4">
                 <h5 class="modal-title fw-bold" id="kmsModalLabel">
-                  <small class="fw-normal"> Untuk Anak Usia 0 - 5 Tahun </small><br>
+                  <small class="fw-normal"> Untuk Anak Usia 0 - 5 Tahun </small><br />
                   Cek Indeks Berat dan Tinggi Badan Menurut Umur
                 </h5>
                 <button
@@ -835,8 +862,22 @@ export default {
 }
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(9, 1fr); /* default (desktop besar) */
   gap: 0.5rem;
+}
+
+/* Tablet: 3 kolom */
+@media (max-width: 991.98px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Phone: juga 3 kolom */
+@media (max-width: 575.98px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .stats-wrapper {
@@ -857,7 +898,9 @@ export default {
   border: 2px solid #198754;
   border-radius: 0.75rem;
   background: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   font-size: 0.8rem;
 }
 
